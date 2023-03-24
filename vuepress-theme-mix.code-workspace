@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "name": "root",
+      "path": "."
+    },
+    {
+      "name": "vuepress-plugin-back-top",
+      "path": "./packages/@vuepress-theme-mix/vuepress-plugin-back-top"
+    },
+    {
+      "name": "vuepress-theme-mix",
+      "path": "./packages/vuepress-theme-mix"
+    }
+  ]
+}
