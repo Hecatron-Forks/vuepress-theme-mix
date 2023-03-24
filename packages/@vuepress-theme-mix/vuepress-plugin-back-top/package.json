@@ -27,7 +27,8 @@
   "scripts": {
     "build": "tsc -b tsconfig.build.json",
     "clean": "rimraf lib *.tsbuildinfo",
-    "copy": "cpx \"src/**/*.css\" lib"
+    "copy": "cpx \"src/**/*.css\" lib",
+    "upd": "ncu -p pnpm -i"
   },
   "dependencies": {
     "@vuepress/client": "2.0.0-beta.49",

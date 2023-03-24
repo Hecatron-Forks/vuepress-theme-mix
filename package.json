@@ -17,7 +17,8 @@
     "lint": "eslint --ext .js,.ts,.vue .",
     "prepare": "husky install",
     "release:minor": "yarn lint && yarn clean && yarn copy && yarn build && lerna publish minor",
-    "release:patch": "yarn lint && yarn clean && yarn copy && yarn build && lerna publish patch"
+    "release:patch": "yarn lint && yarn clean && yarn copy && yarn build && lerna publish patch",
+    "upd": "npm-check-updates -ws -i --root"
   },
   "lint-staged": {
     "*.{js,ts,vue}": "eslint --fix",
@@ -43,6 +44,7 @@
     "husky": "^8.0.1",
     "lerna": "^5.3.0",
     "lint-staged": "^13.0.3",
+    "npm-check-updates": "^16.8.0",
     "prettier": "2.7.1",
     "rimraf": "^3.0.2",
     "sort-package-json": "^1.57.0",

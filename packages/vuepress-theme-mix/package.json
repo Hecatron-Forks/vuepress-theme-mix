@@ -25,7 +25,8 @@
   "scripts": {
     "build": "tsc --build tsconfig.build.json",
     "clean": "rimraf lib *.tsbuildinfo",
-    "copy": "cpx \"src/**/*.{d.ts,vue,scss}\" lib"
+    "copy": "cpx \"src/**/*.{d.ts,vue,scss}\" lib",
+    "upd": "ncu -p pnpm -i"
   },
   "dependencies": {
     "@vuepress-theme-mix/vuepress-plugin-back-top": "1.4.1",
