@@ -1,0 +1,3 @@
+packages:
+  - 'packages/vuepress-theme-mix'
+  - 'packages/@vuepress-theme-mix/*'
