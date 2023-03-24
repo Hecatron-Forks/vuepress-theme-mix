@@ -1,6 +1,6 @@
 import type { GitPluginPageData } from '@vuepress/plugin-git'
-import type { NavLink } from './navbarConfig'
-import type { SidebarConfig } from './sidebarConfig'
+import type { NavLink } from './navbarConfig.js'
+import type { SidebarConfig } from './sidebarConfig.js'
 
 export interface MixThemePageData extends GitPluginPageData {
   filePathRelative: string | null

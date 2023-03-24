@@ -11,9 +11,17 @@ import type {
   MixThemePageData,
   MixThemeData,
   MixThemePluginConfig,
-} from '../shared'
-import { assignThemeData, resolveContainerPluginOptions } from './utils'
+} from '../shared/index.js'
+import { assignThemeData, resolveContainerPluginOptions } from './utils/index.js'
 import { backTopPlugin } from '@vuepress-theme-mix/vuepress-plugin-back-top'
+import { fileURLToPath } from 'url'
+import * as mdImplicitFiguresPlugin from 'markdown-it-implicit-figures'
+import * as mdSubPlugin from 'markdown-it-sub'
+import * as mdSupPlugin from 'markdown-it-sup'
+import * as mdFootnotePlugin from 'markdown-it-footnote'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 export interface MixThemeConfig extends MixThemeData {
   /**
@@ -118,26 +126,25 @@ export const mixTheme = ({
       // @vuepress/plugin-nprogress
       themePlugins?.nprogress !== false ? nprogressPlugin() : [],
 
-      // TODO
       // @vuepress/plugin-git
-      // themePlugins?.git !== false
-      //  ? gitPlugin({
-      //    createdTime: false,
-      //    updatedTime: localeOptions.lastUpdated !== false,
-      //  })
-      //  : [],
+      themePlugins?.git !== false
+        ? gitPlugin({
+          createdTime: false,
+          updatedTime: localeOptions.lastUpdated !== false,
+        })
+        : [],
     ],
 
     extendsMarkdown: (md): void => {
       if (localeOptions.figcaption !== false) {
-        md.use(require('markdown-it-implicit-figures'), {
+        md.use(mdImplicitFiguresPlugin.default, {
           figcaption: true,
         })
       }
-      if (localeOptions.sub !== false) md.use(require('markdown-it-sub'))
-      if (localeOptions.sup !== false) md.use(require('markdown-it-sup'))
+      if (localeOptions.sub !== false) md.use(mdSubPlugin.default)
+      if (localeOptions.sup !== false) md.use(mdSupPlugin.default)
       if (localeOptions.footnote !== false) {
-        md.use(require('markdown-it-footnote'))
+        md.use(mdFootnotePlugin.default)
       }
     },
   }

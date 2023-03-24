@@ -1,12 +1,12 @@
 import {
   useThemeData as _useThemeData,
   useThemeLocaleData as _useThemeLocaleData,
-} from '@vuepress/plugin-theme-data/lib/client/composables'
+} from '@vuepress/plugin-theme-data/client'
 import type {
   ThemeDataRef,
   ThemeLocaleDataRef,
-} from '@vuepress/plugin-theme-data/lib/client/composables'
-import type { MixThemeData } from '../../shared'
+} from '@vuepress/plugin-theme-data/client'
+import type { MixThemeData } from '../../shared/index.js'
 
 export const useThemeData = (): ThemeDataRef<MixThemeData> =>
   _useThemeData<MixThemeData>()

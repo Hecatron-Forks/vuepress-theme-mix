@@ -1,6 +1,6 @@
 import { h, computed, onMounted, provide, ref } from 'vue'
 import { defineClientConfig, usePageFrontmatter } from '@vuepress/client'
-import CodeGroup from './components/global/CodeGroup'
+import CodeGroup from './components/global/CodeGroup.js'
 import CodeGroupItem from './components/global/CodeGroupItem.vue'
 import CodePenSnippet from './components/global/CodePenSnippet.vue'
 import OutboundLink from './components/global/OutboundLink.vue'
@@ -11,8 +11,8 @@ import {
   themeModeSymbol,
   useThemeLocaleData,
   useScrollPromise,
-} from './composables'
-import type { MixThemeNormalPageFrontmatter } from '../shared'
+} from './composables/index.js'
+import type { MixThemeNormalPageFrontmatter } from '../shared/index.js'
 
 import './styles/index.scss'
 

@@ -1,7 +1,7 @@
 import type { LocaleData } from '@vuepress/core'
 import type { ThemeData } from '@vuepress/plugin-theme-data'
-import type { NavbarConfig } from './navbarConfig'
-import type { SidebarConfig } from './sidebarConfig'
+import type { NavbarConfig } from './navbarConfig.js'
+import type { SidebarConfig } from './sidebarConfig.js'
 
 export interface MixThemePluginConfig {
   /**

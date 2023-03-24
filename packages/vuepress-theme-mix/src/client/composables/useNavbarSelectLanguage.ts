@@ -1,8 +1,8 @@
 import { computed, ComputedRef } from 'vue'
 import { useRouter } from 'vue-router'
 import { useRouteLocale, useSiteLocaleData } from '@vuepress/client'
-import { ResolvedNavbarItem } from '../../shared'
-import { useThemeLocaleData } from './useThemeData'
+import { ResolvedNavbarItem } from '../../shared/index.js'
+import { useThemeLocaleData } from './useThemeData.js'
 
 export const useNavbarSelectLanguage = (): ComputedRef<ResolvedNavbarItem[]> => {
   const router = useRouter()

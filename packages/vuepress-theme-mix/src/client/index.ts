@@ -5,6 +5,6 @@ export type {
   MixThemePluginConfig,
   MixThemeLocaleData,
   MixThemeData,
-} from '../shared'
+} from '../shared/index.js'
 
-export * from './composables'
+export * from './composables/index.js'

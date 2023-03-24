@@ -1,5 +1,5 @@
-import { backTopPlugin } from './backTopPlugin'
+import { backTopPlugin } from './backTopPlugin.js'
 
-export * from './backTopPlugin'
+export * from './backTopPlugin.js'
 
 export default backTopPlugin

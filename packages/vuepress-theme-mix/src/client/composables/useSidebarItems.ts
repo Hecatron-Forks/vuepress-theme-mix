@@ -16,8 +16,8 @@ import type {
   SidebarCongfigObject,
   SidebarGroup,
   SidebarLink,
-} from '../../shared'
-import { useNavLink } from './useNavLink'
+} from '../../shared/index.js'
+import { useNavLink } from './useNavLink.js'
 
 export type SidebarItemsRef = ComputedRef<ResolvedSidebarItem[]>
 

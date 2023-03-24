@@ -1,4 +1,4 @@
-import type { MixThemeData } from '../../shared'
+import type { MixThemeData } from '../../shared/index.js'
 
 const defalutThemeData: MixThemeData = {
   logo: null,

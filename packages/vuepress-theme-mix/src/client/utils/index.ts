@@ -1,2 +1,2 @@
-export * from './resolveEditLink'
-export * from './resolveRepoType'
+export * from './resolveEditLink.js'
+export * from './resolveRepoType.js'

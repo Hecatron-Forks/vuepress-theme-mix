@@ -1,4 +1,4 @@
-import type { NavLink } from './navbarConfig'
+import type { NavLink } from './navbarConfig.js'
 
 export interface SidebarLink extends NavLink {
   type: 'link'
