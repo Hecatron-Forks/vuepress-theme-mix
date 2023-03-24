@@ -4,7 +4,7 @@
     "declaration": true,
     "declarationMap": true,
     "lib": ["DOM", "ES2020"],
-    "module": "CommonJS",
+    "module": "ES2020",
     "moduleResolution": "node",
     "newLine": "lf",
     "noEmitOnError": true,

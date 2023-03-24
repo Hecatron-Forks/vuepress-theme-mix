@@ -19,6 +19,7 @@
   },
   "license": "MIT",
   "author": "Gavin Liu <gavinliu0606@gmail.com> (https://gavinliu.me)",
+  "type": "module",
   "main": "lib/node/index.js",
   "types": "lib/node/index.d.ts",
   "files": [
