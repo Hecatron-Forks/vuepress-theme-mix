@@ -31,10 +31,6 @@ export const mixTheme = ({
 
   return {
     name: 'vuepress-theme-mix',
-    layouts: {
-      Layout: path.resolve(__dirname, '../client/layouts/Layout.vue'),
-      404: path.resolve(__dirname, '../client/layouts/404.vue'),
-    },
     clientConfigFile: path.resolve(__dirname, '../client/config.js'),
 
     extendsPage: (page: Page<Partial<MixThemePageData>>) => {
@@ -122,13 +118,14 @@ export const mixTheme = ({
       // @vuepress/plugin-nprogress
       themePlugins?.nprogress !== false ? nprogressPlugin() : [],
 
+      // TODO
       // @vuepress/plugin-git
-      themePlugins?.git !== false
-        ? gitPlugin({
-          createdTime: false,
-          updatedTime: localeOptions.lastUpdated !== false,
-        })
-        : [],
+      // themePlugins?.git !== false
+      //  ? gitPlugin({
+      //    createdTime: false,
+      //    updatedTime: localeOptions.lastUpdated !== false,
+      //  })
+      //  : [],
     ],
 
     extendsMarkdown: (md): void => {

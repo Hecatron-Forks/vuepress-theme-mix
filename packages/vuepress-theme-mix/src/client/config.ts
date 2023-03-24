@@ -4,6 +4,7 @@ import CodeGroup from './components/global/CodeGroup'
 import CodeGroupItem from './components/global/CodeGroupItem.vue'
 import CodePenSnippet from './components/global/CodePenSnippet.vue'
 import OutboundLink from './components/global/OutboundLink.vue'
+import { path } from '@vuepress/utils'
 import {
   resolveSidebarItems,
   sidebarItemsSymbol,
@@ -16,6 +17,10 @@ import type { MixThemeNormalPageFrontmatter } from '../shared'
 import './styles/index.scss'
 
 export default defineClientConfig({
+  layouts: {
+    Layout: path.resolve(__dirname, '../client/layouts/Layout.vue'),
+    NotFound: path.resolve(__dirname, '../client/layouts/NotFound.vue'),
+  },
   enhance({ app, router }) {
     app.component('CodeGroup', CodeGroup)
     app.component('CodeGroupItem', CodeGroupItem)
