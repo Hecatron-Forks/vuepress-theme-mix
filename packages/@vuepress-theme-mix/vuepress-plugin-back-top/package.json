@@ -31,9 +31,9 @@
     "upd": "ncu -p pnpm -i"
   },
   "dependencies": {
-    "@vuepress/client": "2.0.0-beta.49",
-    "@vuepress/core": "2.0.0-beta.49",
-    "@vuepress/utils": "2.0.0-beta.49",
+    "@vuepress/client": "2.0.0-beta.61",
+    "@vuepress/core": "2.0.0-beta.61",
+    "@vuepress/utils": "2.0.0-beta.61",
     "ts-debounce": "^4.0.0",
     "vue": "^3.2.37"
   },
